@@ -10,6 +10,20 @@ STM32F411 마이크로컨트롤러에서 **버튼 3개로 LED 4개의 점등·�
 | `PC1` | LED 4개를 끄고 점멸을 해제합니다. |
 | `PC3` | LED 4개의 출력을 약 200 ms마다 반전합니다. 버튼을 놓아도 점멸을 유지합니다. |
 
+## 기능 다이어그램
+
+```mermaid
+flowchart LR
+    A["버튼 입력<br/>PC0 · PC1 · PC3"] --> B["입력 판별<br/>Low 감지 및 우선순위 적용"]
+    B --> C["LED 제어<br/>점등 · 소등 · 200 ms 간격 반전"]
+    C --> D["LED 4개<br/>PB13 · PB14 · PB15 · PC4"]
+    classDef block fill:#eaf4ff,stroke:#000,stroke-width:2px,color:#000,font-weight:bold
+    class A,B,C,D block
+    style B fill:#f0f2f4
+    style C fill:#eef7ee
+    linkStyle default stroke:#000,stroke-width:2px
+```
+
 ## 구현 방식
 
 - **GPIO 설정** · `PC0`, `PC1`, `PC3`을 버튼 입력으로 구성하고, `PB13`, `PB14`, `PB15`, `PC4`를 LED 제어용 푸시풀 출력으로 구성했습니다. LED 출력은 초기화 시 모두 Low로 설정합니다.
