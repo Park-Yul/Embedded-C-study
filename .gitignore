@@ -1,0 +1,48 @@
+# STM32CubeIDE managed build output (regenerated on each developer's PC).
+Debug/
+Release/
+
+# Compiler/linker output, including output outside the standard build folders.
+*.o
+*.obj
+*.d
+*.elf
+*.axf
+*.map
+*.list
+*.su
+*.cyclo
+*.gcno
+*.gcda
+*.gcov
+
+# Locally generated firmware images. Publish release images separately if needed.
+*.hex
+*.bin
+
+# Eclipse / STM32CubeIDE workspace state and generated indexes.
+.metadata/
+.recommenders/
+.cache/
+*.launch
+*.launch.bak
+*.launch.bak.*
+**/.settings/stm32cubeide.project.prefs
+**/.settings/language.settings.xml
+**/.settings/org.eclipse.cdt.core.prefs
+
+# Editor backups and operating-system metadata.
+*~
+*.swp
+*.swo
+*.orig
+*.rej
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Keep shared project inputs under version control:
+# Core/, Drivers/, *.ioc, *.ld, startup *.s, .project, .cproject,
+# .mxproject, and .settings/org.eclipse.core.resources.prefs (text encoding).
+# Do not ignore all *.mk or makefiles: hand-written build files may be required.
+# Do not ignore *.a: vendor libraries may be required to link the firmware.
